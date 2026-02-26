@@ -8,11 +8,6 @@
     "enablingApproaches": "Enabling Approaches",
     "conditionsEarlyAction": "Conditions to deliver the Early Action"
   },
-  "dotsIndex": {
-    "plannedOperations": 3,
-    "enablingApproaches": 4,
-    "conditionsEarlyAction": 5
-  },
   "checkboxes": {
     "plannedOperations": ["Shelter"],
     "enablingApproaches": ["Secretariat Services"]
