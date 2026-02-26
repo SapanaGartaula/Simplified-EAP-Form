@@ -4,8 +4,11 @@ import path from "path";
 
 setup("Verify login functionality user", async ({ page }) => {
   await page.goto("https://alpha-3.ifrc-go.dev.togglecorp.com/login");
-  const username = process.env.Go_Username;
+   const username = process.env.Go_Username;
   const password = process.env.Go_Password;
+  if (!username || !password) {
+    throw new Error('Go_Username or Go_Password environment variable is not set.');
+  }
    await page.locator('input[type="text"], input[name*="email"]').fill(username);
   await page.locator('input[type="password"]').fill(password);
   await page.getByRole("button", { name: "Login" }).click();
