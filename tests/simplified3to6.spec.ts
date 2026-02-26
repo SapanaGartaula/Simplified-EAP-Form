@@ -26,7 +26,8 @@ test.describe('Simplified2', () => {
             await timeframe.press('ArrowUp');
         }
 
-        const timeframe1 = page.locator('input[name="budget_per_sector"]');
+       const timeframe1 = page.locator('input[name="budget_per_sector"]');
+        await timeframe1.waitFor({ timeout: 10000 }); // Wait up to 10 seconds
         while (await timeframe1.inputValue() !== fixtures.inputValues.budgetPerSector) {
             await timeframe1.press('ArrowUp');
         }
