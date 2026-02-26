@@ -1,0 +1,40 @@
+{
+  "urls": {
+    "simplified32": "https://alpha-3.ifrc-go.dev.togglecorp.com/eap/32/simplified"
+  },
+  "headings": {
+    "formTitle": "Simplified EAP form",
+    "plannedOperations": "Planned Operations",
+    "enablingApproaches": "Enabling Approaches",
+    "conditionsEarlyAction": "Conditions to deliver the Early Action"
+  },
+  "dotsIndex": {
+    "plannedOperations": 3,
+    "enablingApproaches": 4,
+    "conditionsEarlyAction": 5
+  },
+  "checkboxes": {
+    "plannedOperations": ["Shelter"],
+    "enablingApproaches": ["Secretariat Services"]
+  },
+  "inputValues": {
+    "peopleTargeted": "15",
+    "budgetPerSector": "500",
+    "budgetPerApproach": "500",
+    "apCode": "5",
+    "indicatorTitle": "Indicator",
+    "indicatorTarget": "5",
+    "activities": ["Readiness", "Pre-positioning", "EarlyAction"],
+    "activityTimeframe": "5",
+    "timeframeType": "Months",
+    "readinessBudget": "100",
+    "prePositioningBudget": "200",
+    "earlyActionBudget": "300",
+    "totalBudget": "600"
+  },
+  "textAreas": {
+    "early_action_capability": "Assumptions or minimum conditions needed to deliver on the early actions (including issues to be resolved.) Explain how the National Society will be able to delive on the early actions, what experiences and/or capacities they have related to be intervention. Are there issues to be addressed in order for the Naional Society to deliver on these actions? How will these issues be resolved?",
+    "rcrc_movement_involvement": "Explain who was part of the development of this plan, how were they involved and if they have any role on the implementation of the actions. Add any relevant information of the National Societys role in the National Disaster Response System."
+  },
+  "fileUpload": "C:/Users/gauta/OneDrive/Desktop/stockimages/budget_template (1).xlsm"
+}
