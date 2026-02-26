@@ -1,0 +1,14 @@
+{
+    "NationalSocietyContact" : {
+        "NS_Name": "Sapana",
+        "NS_Title": "National Science Foundation",
+        "NS_Email": "sapana123@gmail.com",
+        "NS_PhoneNumber": "1234567890"
+    },
+
+    "RiskAnalysis" : {
+
+       "RA_Description": "The extent to which this hazard has produced and/or will produce negative impacts on lives, livelihoods, well-being and other development aspects.."
+
+    }
+}
