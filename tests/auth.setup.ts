@@ -13,5 +13,5 @@ setup("Verify login functionality user", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1, name: "IFRC Disaster Response and Preparedness" })).toBeVisible();
 
   // Save storage state in project root
-  await page.context().storageState({ path: "auth.json" });
+  await page.context().storageState({ path: "playwright/.auth/user.json" });
 });
