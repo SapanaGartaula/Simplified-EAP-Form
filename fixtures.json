@@ -66,5 +66,5 @@
     "stakeholder1": "Yes, the EAP was developed in collaboration with government agencies and relevant stakeholders through consultations, workshops, and reviews, with their feedback integrated before final validation and approval.",
     "stakeholder2":"he external actors and Movement components that have been involved in the development of this EAP. Include international, national, regional and local actors, if applicable."
   },
-  "fileUpload": "C:/Users/gauta/OneDrive/Desktop/stockimages/budget_template (1).xlsm"
+  "fileUpload": "./test-files/budget_template.xlsm"
 }
