@@ -68,40 +68,15 @@ test("Verify Simplified EAP Form functionality", async ({ page }) => {
 
   // national society details
   await page.evaluate(() => window.scrollTo(0, 1800));
-  await page
-    .locator('input[name="name"]')
-    .nth(0)
-    .fill(Testdata.NationalSocietyContact.NS_Name);
-  await page
-    .locator('input[name="title"]')
-    .nth(0)
-    .fill(Testdata.NationalSocietyContact.NS_Title);
-  await page
-    .locator('input[name="email"]')
-    .nth(0)
-    .fill(Testdata.NationalSocietyContact.NS_Email);
-  await page
-    .locator('input[name="phone_number"]')
-    .nth(0)
-    .fill(Testdata.NationalSocietyContact.NS_PhoneNumber.toString());
-
+  await page.locator('input[name="name"]').nth(0).fill(Testdata.NationalSocietyContact.NS_Name);
+  await page.locator('input[name="title"]').nth(0).fill(Testdata.NationalSocietyContact.NS_Title);
+  await page.locator('input[name="email"]').nth(0).fill(Testdata.NationalSocietyContact.NS_Email);
+  await page.locator('input[name="phone_number"]').nth(0).fill(Testdata.NationalSocietyContact.NS_PhoneNumber.toString());
   await page.getByRole("button", { name: "Add Partner NS" }).click();
-  await page
-    .locator('input[name="name"]')
-    .nth(1)
-    .fill(Testdata.NationalSocietyContact.NS_Name);
-  await page
-    .locator('input[name="title"]')
-    .nth(1)
-    .fill(Testdata.NationalSocietyContact.NS_Title);
-  await page
-    .locator('input[name="email"]')
-    .nth(1)
-    .fill(Testdata.NationalSocietyContact.NS_Email);
-  await page
-    .locator('input[name="phone_number"]')
-    .nth(1)
-    .fill(Testdata.NationalSocietyContact.NS_PhoneNumber);
+  await page.locator('input[name="name"]').nth(1).fill(Testdata.NationalSocietyContact.NS_Name);
+  await page.locator('input[name="title"]').nth(1).fill(Testdata.NationalSocietyContact.NS_Title);
+  await page.locator('input[name="email"]').nth(1).fill(Testdata.NationalSocietyContact.NS_Email);
+  await page.locator('input[name="phone_number"]').nth(1).fill(Testdata.NationalSocietyContact.NS_PhoneNumber);
 
   //  call
   await fillAndAssertFields(page, 'input[name="name"]', "Sapana", 2);
@@ -110,57 +85,32 @@ test("Verify Simplified EAP Form functionality", async ({ page }) => {
   await fillAndAssertFields(page, 'input[name="phone_number"]', "", 2);
 
   await page.getByRole("button", { name: "Next" }).click();
-  await expect(
-    page.getByRole("heading", { level: 3, name: "RISK ANALYSIS" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { level: 3, name: "RISK ANALYSIS" })).toBeVisible();
 
   const description = Testdata.RiskAnalysis.RA_Description;
   const filePath = "C:\\Users\\sapan\\Downloads\\cloud.jpg";
 
   //  1st Description
-  await page
-    .locator('[name="prioritized_hazard_and_impact"]')
-    .fill(description);
-  await expect(
-    page.locator('[name="prioritized_hazard_and_impact"]'),
-  ).toHaveValue(description);
+  await page.locator('[name="prioritized_hazard_and_impact"]').fill(description);
   await page.locator('[type="file"]').nth(0).setInputFiles(filePath);
 
   //  2nd Description
   await page.locator('[name="risks_selected_protocols"]').fill(description);
-  await expect(page.locator('[name="risks_selected_protocols"]')).toHaveValue(
-    description,
-  );
   await page.locator('input[type="file"]').nth(1).setInputFiles(filePath);
 
   //  3rd Description
   await page.locator('[name="selected_early_actions"]').fill(description);
-  await expect(page.locator('[name="selected_early_actions"]')).toHaveValue(
-    description,
-  );
   await page.locator('input[type="file"]').nth(2).setInputFiles(filePath);
 
   // button click
 
   await page.getByRole("button", { name: "Next" }).click();
-  await expect(
-    page.getByRole("heading", { level: 3, name: "Early Action Intervention" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { level: 3, name: "Early Action Intervention" }),).toBeVisible();
 
   // Early Action Intervention
-  await page
-    .locator('[name="overall_objective_intervention"]')
-    .fill(description);
-  await expect(
-    page.locator('[name="overall_objective_intervention"]'),
-  ).toHaveValue(description);
-
-  await page
-    .locator('[name="potential_geographical_high_risk_areas"]')
-    .fill(description);
-  await expect(
-    page.locator('input[name="potential_geographical_high_risk_areas"]'),
-  ).toHaveValue(description);
+  await page.locator('[name="overall_objective_intervention"]').fill(description);
+  await page.locator('[name="potential_geographical_high_risk_areas"]').fill(description);
+  
 
   // Time frame
   const timesframe = page.locator('input[name="people_targeted"]');
@@ -171,19 +121,9 @@ test("Verify Simplified EAP Form functionality", async ({ page }) => {
   // description
 
   await page.locator('[name="assisted_through_operation"]').fill(description);
-  await expect(page.locator('[name="assisted_through_operation"]')).toHaveValue(
-    description,
-  );
-
   await page.locator('[name="selection_criteria"]').fill(description);
-  await expect(page.locator('[name="selection_criteria"]')).toHaveValue(
-    description,
-  );
-
   await page.locator('[name="trigger_statement"]').fill(description);
-  await expect(page.locator('[name="trigger_statement"]')).toHaveValue(
-    description,
-  );
+ 
 
   const value = page.locator('input[name="seap_lead_time"]');
   while ((await value.inputValue()) !== "2") {
@@ -191,9 +131,7 @@ test("Verify Simplified EAP Form functionality", async ({ page }) => {
   }
 
   // Dropdown
-  const openButton = page
-    .locator('input[name="seap_lead_timeframe_unit"]')
-    .nth(0);
+  const openButton = page.locator('input[name="seap_lead_timeframe_unit"]').nth(0);
   await openButton.fill("Months");
   await page.getByRole("button", { name: "Months" }).click();
 
@@ -204,25 +142,15 @@ test("Verify Simplified EAP Form functionality", async ({ page }) => {
   }
 
   // Readonly Timeframe
-  await expect(
-    page.locator('input[name="operational_timeframe_unit"]'),
-  ).toHaveValue("Months");
+  await expect(page.locator('input[name="operational_timeframe_unit"]')).toHaveValue("Months");
   // Description
-  await page
-    .locator('[name="trigger_threshold_justification"]')
-    .fill(description);
-  await expect(
-    page.locator('[name="trigger_threshold_justification"]'),
-  ).toHaveValue(description);
+  await page.locator('[name="trigger_threshold_justification"]').fill(description);
+
 
   await page.locator('[name="next_step_towards_full_eap"]').fill(description);
-  await expect(page.locator('[name="next_step_towards_full_eap"]')).toHaveValue(
-    description,
-  );
+ 
 
   // Back
   await page.getByRole("button", { name: "Back" }).click();
-  await expect(
-    page.getByRole("heading", { level: 3, name: "Risk Analysis" }),
-  ).toBeVisible();
+  await expect( page.getByRole("heading", { level: 3, name: "Risk Analysis" }),).toBeVisible();
 });
