@@ -55,10 +55,6 @@ await fileInput.setInputFiles("C:\\Users\\sapan\\Downloads\\cloud.jpg");
 await page.locator('input[name="caption"]').fill("cloud image");
 await expect(page.locator('input[name="caption"]')).toHaveValue("cloud image");
 
-//  //  delete 
-// const deleteIcon = page.getByRole("button", { name: "Remove" });
-// await deleteIcon.click(); 
-
 // Timeframe field
   const timeframe = page.locator('input[type="number"]'); 
   while (await timeframe.inputValue() !== "3") {
@@ -92,8 +88,8 @@ await expect(page.getByRole('heading',{level:3, name: "RISK ANALYSIS" })).toBeVi
   const filePath = "C:\\Users\\sapan\\Downloads\\cloud.jpg";
 
   //  1st Description
-  await page.locator('[name="prioritized_hazard_and_impact"]').fill(description);
-  await expect(page.locator('[name="prioritized_hazard_and_impact"]')).toHaveValue(description);
+  await page.locator('input[name="prioritized_hazard_and_impact"]').fill(description);
+  await expect(page.locator('input[name="prioritized_hazard_and_impact"]')).toHaveValue(description);
   await page.locator('input[type="file"]').nth(0).setInputFiles(filePath);
 
   //  2nd Description
@@ -112,11 +108,11 @@ await page.getByRole('button',{name:"Next"}).click();
 await expect(page.getByRole('heading',{level:3, name: "Early Action Intervention" })).toBeVisible();
 
 // Early Action Intervention
-await page.locator('[name="overall_objective_intervention"]').fill(description);
+await page.locator('input[name="overall_objective_intervention"]').fill(description);
 await expect(page.locator('[name="overall_objective_intervention"]')).toHaveValue(description);
 
-await page.locator('[name="potential_geographical_high_risk_areas"]').fill(description);
-await expect(page.locator('[name="potential_geographical_high_risk_areas"]')).toHaveValue(description);
+await page.locator('input[name="potential_geographical_high_risk_areas"]').fill(description);
+await expect(page.locator('input[name="potential_geographical_high_risk_areas"]')).toHaveValue(description);
 
 
 // Time frame
@@ -149,7 +145,7 @@ await page.getByRole('button',{name:"Months"}).click();
 
 // Value
 const values= page.locator('input[name="operational_timeframe"]'); 
-while (await values.inputValue() !== "5") {
+while (await values.inputValue() !== "5") { 
   await values.press("ArrowUp");
 }
 
@@ -165,11 +161,6 @@ await expect(page.locator('[name="next_step_towards_full_eap"]')).toHaveValue(de
 // Back
 await page.getByRole('button',{name:"Back"}).click();
 await expect(page.getByRole('heading',{level:3, name: "Risk Analysis" })).toBeVisible();
-
-
-
-
-
 
 });
 
