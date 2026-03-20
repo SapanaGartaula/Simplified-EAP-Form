@@ -11,7 +11,7 @@ test.describe('Simplified2', () => {
         await page.goto(fixtures.urls.simplified32);
         await expect(page.getByRole('heading', { level: 1, name: fixtures.headings.formTitle })).toBeVisible();
 
-        const fourthDot = page.locator('._dot_1spp3_157').nth(fixtures.dotsIndex.plannedOperations);
+        const fourthDot = page.locator('._dot_1spp3_157').nth(3);
         await fourthDot.click();
 
         await expect(page.getByRole('heading', { level: 3, name: fixtures.headings.plannedOperations })).toBeVisible();
@@ -65,7 +65,7 @@ test.describe('Simplified2', () => {
         await page.goto(fixtures.urls.simplified32);
         await expect(page.getByRole('heading', { level: 1, name: fixtures.headings.formTitle })).toBeVisible();
 
-        const fifthDot = page.locator('._dot_1spp3_157').nth(fixtures.dotsIndex.enablingApproaches);
+        const fifthDot = page.locator('._dot_1spp3_157').nth(4);
         await fifthDot.click();
 
         await expect(page.getByRole('heading', { level: 3, name: fixtures.headings.enablingApproaches })).toBeVisible();
@@ -113,7 +113,7 @@ test.describe('Simplified2', () => {
         await page.goto(fixtures.urls.simplified32);
         await expect(page.getByRole('heading', { level: 1, name: fixtures.headings.formTitle })).toBeVisible();
 
-        const sixthDot = page.locator('._dot_1spp3_157').nth(fixtures.dotsIndex.conditionsEarlyAction);
+        const sixthDot = page.locator('._dot_1spp3_157').nth(5);
         await sixthDot.click();
 
         await expect(page.getByRole('heading', { level: 3, name: fixtures.headings.conditionsEarlyAction })).toBeVisible();
