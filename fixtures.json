@@ -1,6 +1,11 @@
 {
+  "paths": {
+    "url": "https://alpha-3.ifrc-go.dev.togglecorp.com/eap/2/full",
+    "image": "C:/Users/gauta/OneDrive/Desktop/stockimages/pexels-leefinvrede-36070618.jpg",
+    "document": "C:/Users/gauta/OneDrive/Desktop/stockimages/file-sample_100kB.doc"
+  },
   "urls": {
-    "simplified32": "https://alpha-3.ifrc-go.dev.togglecorp.com/eap/32/simplified"
+    "simplified32": "https://alpha-3.ifrc-go.dev.togglecorp.com/eap/1/simplified"
   },
   "headings": {
     "formTitle": "Simplified EAP form",
@@ -13,7 +18,9 @@
     "enablingApproaches": ["Secretariat Services"]
   },
   "inputValues": {
+    "lead_time":"10",
     "peopleTargeted": "15",
+    "Link":"https",
     "budgetPerSector": "500",
     "budgetPerApproach": "500",
     "apCode": "5",
@@ -21,15 +28,43 @@
     "indicatorTarget": "5",
     "activities": ["Readiness", "Pre-positioning", "EarlyAction"],
     "activityTimeframe": "5",
+    "activityTimeframe1":"11",
     "timeframeType": "Months",
     "readinessBudget": "100",
     "prePositioningBudget": "200",
     "earlyActionBudget": "300",
-    "totalBudget": "600"
+    "totalBudget": "600",
+    "nationalsociety":["Afghan Red Crescent Society","Albanian Red Cross","Algerian Red Crescent","Andorran Red Cross","Angola Red Cross", "Antigua and Barbuda Red Cross","Argentine Red Cross","Armenian Red Cross Society",
+                        "Australian Red Cross","Austrian Red Cross","Red Crescent Society of Azerbaijan","The Bahamas Red Cross Society"],
+    "country":["Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas"],
+    "disastertype":["Biological Emergency","Chemical Emergency","Civil Unrest","Cold Wave","Complex Emergency","Cyclone","Drought","Earthquake","Epidemic","Fire","Flood"],
+    "Name":["Stuart","Steven","Nancy","Simon","Larry","Harry","Liam","Louis","Brent"],
+    "Title":["NS","IRFC","DREF","PNS","IDAFP","IHOD","DFP","IRAFP","IROM","IRHOD","IGOC"],
+    "email":["stuart@gmail.com","steven@gmail.com","nancy@gmail.com","simon@gmail.com","larry@gmail.com","harry@gmail.com","liam@gmail.com","louis@gmail.com","brent@gmail.com"],
+    "pn":["98636363","78237283","82338348","92743847","872368273","82736834","87236237","92468374","287364283"]
   },
+  
   "textAreas": {
+    "feasibility":"fea",
+    "usefulnessofactions":"uoa",
+    "hazardselection":".",
+    "exposedelements":"..",
+    "impact":"...",
+    "prioritisedimpact":"....",
+    "triggerstatement":".....",
+    "forecastselection":"......",
+    "defandjust":".......",
+    "ideninterven":"........",
+    "action":"........",
+    "earlyaction":".....",
+    "evidencebase":"....",
+    "title":"Technical working groups in place",
+    "stakeholder3":"there are technical working groups for the development of the FbF system in country, indicate which organizations participate in these groups.",
     "early_action_capability": "Assumptions or minimum conditions needed to deliver on the early actions (including issues to be resolved.) Explain how the National Society will be able to delive on the early actions, what experiences and/or capacities they have related to be intervention. Are there issues to be addressed in order for the Naional Society to deliver on these actions? How will these issues be resolved?",
-    "rcrc_movement_involvement": "Explain who was part of the development of this plan, how were they involved and if they have any role on the implementation of the actions. Add any relevant information of the National Societys role in the National Disaster Response System."
+    "rcrc_movement_involvement": "Explain who was part of the development of this plan, how were they involved and if they have any role on the implementation of the actions. Add any relevant information of the National Societys role in the National Disaster Response System.",
+    "objective": "To reduce risks and support vulnerable communities through timely and effective intervention.",
+    "stakeholder1": "Yes, the EAP was developed in collaboration with government agencies and relevant stakeholders through consultations, workshops, and reviews, with their feedback integrated before final validation and approval.",
+    "stakeholder2":"he external actors and Movement components that have been involved in the development of this EAP. Include international, national, regional and local actors, if applicable."
   },
   "fileUpload": "C:/Users/gauta/OneDrive/Desktop/stockimages/budget_template (1).xlsm"
 }
